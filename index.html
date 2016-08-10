@@ -74,7 +74,7 @@
                         <form action="" method="POST" class="signup">
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                 <input class="mdl-textfield__input" type="text" id="Email" name="Register">
-                                <label class="mdl-textfield__label" for="Email">Your Email Here...</label>
+                                <label class="mdl-textfield__label" for="Email" id="email-label">Your Email Here...</label>
                             </div>
                             <br>
                             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" id="SubmitButton">
@@ -103,10 +103,12 @@
                     </a>
                 </div>
                 <div class="mdl-mini-footer--right-section">
-                    <button class="mdl-mini-footer--social-btn social-btn__share">
-                        <i class="material-icons" role="presentation">share</i>
-                        <span class="visuallyhidden">share</span>
-                    </button>
+                    <a href="#">
+                        <button class="mdl-mini-footer--social-btn social-btn__share" id="sharebutton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                            <i class="material-icons" role="presentation">share</i>
+                            <span class="visuallyhidden">share</span>
+                        </button>
+                    </a>
                 </div>
             </footer>
         </main>
@@ -116,11 +118,28 @@
 </body>
 <script>
 var docbody = document.getElementsByTagName("BODY");
-var bgnum = Math.ceil(Math.random() * 58) ;
+var bgnum = Math.ceil(Math.random() * 58);
 var urlstring = "bgs/bg" + bgnum;
 docbody[0].style.backgroundImage = "url('" + urlstring + ".jpg')";
 /*document.getElementsByTagName("BODY")[0].style.backgroundRepeat = "norepeat"*/
 ;
+
+var inputField = labelId: '#email-label';
+  console.log('inputField.inputId = '+inputField.inputId);
+  var element = document.querySelector(inputFields.inputId);
+  element.addEventListener('focus', getEventListener(inputField.labelId), true);
+  element.addEventListener('blur', function() {
+        console.log('blurEvent');
+    window.location.hash = "";
+  }, true);
+}
+
+function getEventListener(urlHash) {
+  return function(e) {
+    console.log('focusEvent = '+urlHash);
+    window.location.hash = urlHash;
+  };
+}
 </script>
 
 </html>
