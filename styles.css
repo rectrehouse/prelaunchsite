@@ -588,17 +588,21 @@ body .demo-blog {
     bottom: 0;
     width: 100%;
     margin-top: 80px;
-    height: 120px;
+    height: 7em;
     padding: 40px;
     -webkit-align-items: center;
     -ms-flex-align: center;
     -ms-grid-row-align: center;
     align-items: center;
-    background-color: rgb(19, 20, 22);
+    background-color: rgba(19, 20, 22, 1);
     box-sizing: border-box;
-    box-shadow: -webkit-box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73);
+    /*box-shadow: -webkit-box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73);
     -moz-box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73);
-    box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73);
+    box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73)*/;
+}
+
+.non-footer {
+    padding-bottom: 120px
 }
 
 #useremail {

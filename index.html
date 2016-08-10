@@ -59,26 +59,29 @@
 <body>
     <div class="demo-blog mdl-layout mdl-js-layout is-upgraded over">
         <main class="mdl-layout__content">
-            <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--12-col">
-                    <h1 id="HouseText">Rectre House.</h1>
-                    <p id="PrelaunchText">
-                        Person to person gaming... we <b><i>bet</i></b> you'll love it.
-                        <br> Drop your email to join our VIP list and you'll be the first to know when the House opens.</p>
-                    </p>
+            <div class="non-footer">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h1 id="HouseText">Rectre House.</h1>
+                        <p id="PrelaunchText">
+                            Person to person gaming... we <b><i>bet</i></b> you'll love it.
+                            <br> Drop your email to join our VIP list and you'll be the first to know when the House opens.</p>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="mdl-grid">
-                <div class="mdl-cell mdl-cell--12-col prelaunch">
-                    <form action="" method="POST" class="signup">
-                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="text" id="Email" name="Register">
-                            <label class="mdl-textfield__label" for="Email">Your Email Here...</label>
-                        </div><br>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" id="SubmitButton">
-                            Get Notified!
-                        </button>
-                    </form>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col prelaunch">
+                        <form action="" method="POST" class="signup">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" id="Email" name="Register">
+                                <label class="mdl-textfield__label" for="Email">Your Email Here...</label>
+                            </div>
+                            <br>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" id="SubmitButton">
+                                Get Notified!
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <footer class="mdl-mini-footer">
@@ -108,8 +111,10 @@
 <script>
 var docbody = document.getElementsByTagName("BODY");
 var bgnum = Math.ceil(Math.random() * 58);
-var urlstring = "bgs/bg" + bgnum ;
+var urlstring = "bgs/bg" + bgnum;
 docbody[0].style.backgroundImage = "url('" + urlstring + ".jpg')";
-/*document.getElementsByTagName("BODY")[0].style.backgroundRepeat = "norepeat"*/;
+/*document.getElementsByTagName("BODY")[0].style.backgroundRepeat = "norepeat"*/
+;
 </script>
+
 </html>
