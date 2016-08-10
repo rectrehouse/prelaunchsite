@@ -31,27 +31,27 @@ body .over {
 (max-width: 512px) and (min-resolution: 1.5dppx),
 (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
 (max-width: 1024px) and (max-resolution: 1.5dppx) {
-    body::before {
-        background-image: url('bgs/bg1.jpg');
-    }
+body::before {
+    background-image: url('bgs/bg1.jpg');
+}
 }
 
 @media (min-width: 513px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
 (min-width: 513px) and (max-width: 1024px) and (min-resolution: 1.5dppx),
 (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
 (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx) {
-    body::before {
-        background-image: url('bgs/bg21.jpg');
-    }
+body::before {
+    background-image: url('bgs/bg21.jpg');
+}
 }
 
 @media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
 (min-width: 1025px) and (min-resolution: 1.5dppx),
 (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
 (min-width: 2049px) and (max-resolution: 1.5dppx) {
-    body::before {
-        background-image: url('bgs/bg21.jpg');
-    }
+body::before {
+    background-image: url('bgs/bg21.jpg');
+}
 } */
 
 body .demo-blog {
@@ -72,12 +72,18 @@ body .demo-blog {
 }
 
 .demo-blog.mdl-layout .mdl-layout__content {
-    padding-top: 5rem;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
+    padding-top: 1.5rem;
 }
 
-@media screen and (min-width: 437px) {
+@media screen and (min-width: 360px) and (min-height: 600px) {
+    .demo-blog.mdl-layout .mdl-layout__content {
+        padding-top: 4rem;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media screen and (min-width: 440px) and (min-height: 660px) {
     .demo-blog.mdl-layout .mdl-layout__content {
         padding-top: 11rem;
     }
@@ -417,8 +423,8 @@ body .demo-blog {
 
 
 /* Workaround for Firefox.
- * User agent stylesheet kept overwriting the font in FF only.
- */
+* User agent stylesheet kept overwriting the font in FF only.
+*/
 
 .demo-blog--blogpost .comments > form .mdl-textfield .mdl-textfield__input {
     font-family: 'Roboto', 'Helvetica', sans-serif;
@@ -597,8 +603,9 @@ body .demo-blog {
     background-color: rgba(19, 20, 22, 1);
     box-sizing: border-box;
     /*box-shadow: -webkit-box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73);
-    -moz-box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73);
-    box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73)*/;
+-moz-box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73);
+box-shadow: 3px 5px 12px 7px rgba(0, 0, 0, 0.73)*/
+    ;
 }
 
 .non-footer {
