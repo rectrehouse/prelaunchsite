@@ -121,25 +121,6 @@ var docbody = document.getElementsByTagName("BODY");
 var bgnum = Math.ceil(Math.random() * 58);
 var urlstring = "bgs/bg" + bgnum;
 docbody[0].style.backgroundImage = "url('" + urlstring + ".jpg')";
-/*document.getElementsByTagName("BODY")[0].style.backgroundRepeat = "norepeat"*/
-;
-
-var inputField = labelId: '#email-label';
-  console.log('inputField.inputId = '+inputField.inputId);
-  var element = document.querySelector(inputFields.inputId);
-  element.addEventListener('focus', getEventListener(inputField.labelId), true);
-  element.addEventListener('blur', function() {
-        console.log('blurEvent');
-    window.location.hash = "";
-  }, true);
-}
-
-function getEventListener(urlHash) {
-  return function(e) {
-    console.log('focusEvent = '+urlHash);
-    window.location.hash = urlHash;
-  };
-}
 </script>
 
 </html>
