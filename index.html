@@ -42,28 +42,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.grey-orange.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <style>
-    #view-source {
-        position: fixed;
-        display: block;
-        right: 0;
-        bottom: 0;
-        margin-right: 40px;
-        margin-bottom: 40px;
-        z-index: 900;
+    div._dialog_overlay {
+        z-index: 0 !important;
     }
     </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.css">
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-82348800-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+    ga('create', 'UA-82348800-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 </head>
 
 <body>
@@ -81,13 +83,19 @@
                 </div>
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--12-col prelaunch">
-                        <form action="" method="POST" class="signup">
+                        <!-- Begin MailChimp Signup Form -->
+                        <!--End mc_embed_signup-->
+                        <form action="https://rectrehouse.us1.list-manage.com/subscribe/post?u=0cb02abfc1fb61af98ff2107b&amp;id=5350f95de6" method="POST" class="signup" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" id="Email" name="Register">
+                                <input class="mdl-textfield__input" type="email" id="Email" name="EMAIL">
                                 <label class="mdl-textfield__label" for="Email" id="email-label">Your Email Here...</label>
                             </div>
                             <br>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" id="SubmitButton">
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                <input type="text" name="b_0cb02abfc1fb61af98ff2107b_5350f95de6" tabindex="-1" value="">
+                            </div>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" id="SubmitButton" name="subscribe">
                                 Get Notified!
                             </button>
                         </form>
@@ -96,41 +104,74 @@
             </div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer--left-section">
-                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Person%20to%20person%20gaming%20should%20be%20fun!%0Ahead%20to%20%20http%3A%2F%2Frectrehouse.com%20to%20join%20the%20VIP%20list">
+                    <a class="twitter-share-button" href="https://twitter.com/rectrehouse">
                         <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
                             <span class="visuallyhidden">Twitter</span>
                         </button>
                     </a>
-                    <a href="http://www.facebook.com/sharer/sharer.php?u=rectrehouse.com&title=Rectre House.">
+                    <a href="http://www.facebook.com/rectrehouse">
                         <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
                             <span class="visuallyhidden">Facebook</span>
                         </button>
                     </a>
+                </div>
+                <div class="mdl-mini-footer--right-section">
+                    <button id="show-modal-example" type="button" class="mdl-mini-footer--social-btn social-btn__share mdl-js-button mdl-button mdl-button--raised"><i class="material-icons" role="presentation">share</i>
+                        <span class="visuallyhidden">share</span></button>
+                </div>
+            </footer>
+            <dialog class="mdl-dialog" id="modal-example">
+                <p id="sharetext">Share</p>
+                <div class="mdl-dialog__content">
+                    <a class="twitter-share-button " href="https://twitter.com/intent/tweet?text=Person%20to%20person%20gaming%20should%20be%20fun!%0Ahead%20to%20%20http%3A%2F%2Frectrehouse.com%20to%20join%20the%20VIP%20list">
+                        <button class="mdl-mini-footer--social-btn social-btn social-btn_twitter">
+                            <span class="visuallyhidden">Twitter</span>
+                        </button>
+                    </a>
+                    <a href="http://www.facebook.com/sharer/sharer.php?u=rectrehouse.com&title=Rectre House.">
+                        <button class="mdl-mini-footer--social-btn social-btn social-btn_blogger">
+                            <span class="visuallyhidden">Facebook</span>
+                        </button>
+                    </a>
                     <a href="https://plus.google.com/share?url=rectrehouse.com">
-                        <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus">
+                        <button class="mdl-mini-footer--social-btn social-btn social-btn_gplus">
                             <span class="visuallyhidden">Google Plus</span>
                         </button>
                     </a>
+                    <button class="mdl-mini-footer--social-btn social-btn social-btn_clear mdl-dialog__actions mdl-dialog__actions--full-width" id="closebutton">
+                        <i class="material-icons" role="presentation">clear</i>
+                    </button>
                 </div>
-                <div class="mdl-mini-footer--right-section">
-                    <a href="#">
-                        <button class="mdl-mini-footer--social-btn social-btn__share" id="sharebutton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                            <i class="material-icons" role="presentation">share</i>
-                            <span class="visuallyhidden">share</span>
-                        </button>
-                    </a>
-                </div>
-            </footer>
+            </dialog>
         </main>
         <div class="mdl-layout__obfuscator"></div>
     </div>
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </body>
 <script>
 var docbody = document.getElementsByTagName("BODY");
 var bgnum = Math.ceil(Math.random() * 58);
 var urlstring = "bgs/bg" + bgnum;
 docbody[0].style.backgroundImage = "url('" + urlstring + ".jpg')";
+
+(function() {
+    'use strict';
+    var dialog = document.querySelector('#modal-example');
+    var closeButton = dialog.querySelector('#closebutton');
+    var showButton = document.querySelector('#show-modal-example');
+    if (!dialog.showModal) {
+        dialogPolyfill.registerDialog(dialog);
+    }
+    var closeClickHandler = function(event) {
+        dialog.close();
+    };
+    var showClickHandler = function(event) {
+        dialog.showModal();
+    };
+    showButton.addEventListener('click', showClickHandler);
+    closeButton.addEventListener('click', closeClickHandler);
+}());
 </script>
 
 </html>
