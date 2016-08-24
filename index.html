@@ -88,12 +88,12 @@
             </div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer--left-section">
-                    <a class="twitter-share-button" href="https://twitter.com/rectrehouse">
+                    <a class="twitter-share-button" target="_blank" href="https://twitter.com/rectrehouse">
                         <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
                             <span class="visuallyhidden">Twitter</span>
                         </button>
                     </a>
-                    <a href="http://www.facebook.com/rectrehouse">
+                    <a href="http://www.facebook.com/rectrehouse" target="_blank">
                         <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger">
                             <span class="visuallyhidden">Facebook</span>
                         </button>
@@ -132,30 +132,29 @@
     </div>
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+    var docbody = document.getElementsByTagName("BODY");
+    var bgnum = Math.ceil(Math.random() * 58);
+    var urlstring = "bgs/bg" + bgnum;
+    docbody[0].style.backgroundImage = "url('" + urlstring + ".jpg')";
+
+    (function() {
+        'use strict';
+        var dialog = document.querySelector('#modal-example');
+        var closeButton = dialog.querySelector('#closebutton');
+        var showButton = document.querySelector('#show-modal-example');
+        if (!dialog.showModal) {
+            dialogPolyfill.registerDialog(dialog);
+        }
+        var closeClickHandler = function(event) {
+            dialog.close();
+        };
+        var showClickHandler = function(event) {
+            dialog.showModal();
+        };
+        showButton.addEventListener('click', showClickHandler);
+        closeButton.addEventListener('click', closeClickHandler);
+    }());
+    </script>
 </body>
-<script>
-var docbody = document.getElementsByTagName("BODY");
-var bgnum = Math.ceil(Math.random() * 58);
-var urlstring = "bgs/bg" + bgnum;
-docbody[0].style.backgroundImage = "url('" + urlstring + ".jpg')";
-
-(function() {
-    'use strict';
-    var dialog = document.querySelector('#modal-example');
-    var closeButton = dialog.querySelector('#closebutton');
-    var showButton = document.querySelector('#show-modal-example');
-    if (!dialog.showModal) {
-        dialogPolyfill.registerDialog(dialog);
-    }
-    var closeClickHandler = function(event) {
-        dialog.close();
-    };
-    var showClickHandler = function(event) {
-        dialog.showModal();
-    };
-    showButton.addEventListener('click', showClickHandler);
-    closeButton.addEventListener('click', closeClickHandler);
-}());
-</script>
-
 </html>
