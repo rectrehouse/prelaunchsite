@@ -55,7 +55,7 @@
 </head>
 
 <body>
-    <div class="demo-blog mdl-layout mdl-js-layout is-upgraded">
+    <div class="demo-blog mdl-layout mdl-js-layout is-upgraded over">
         <main itemscope itemtype="http://schema.org/SoftwareApplication" class="mdl-layout__content">
             <img itemprop="image" class="logo" src="images/logo.png">
             <div class="non-footer">
@@ -135,15 +135,10 @@
     <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
+    var docbody = document.getElementsByTagName("BODY");
     var bgnum = Math.ceil(Math.random() * 58);
     var urlstring = "bgs/bg" + bgnum;
-    $(function(){
-        $('<img/>').attr('src', urlstring + '.jpg').on('load', function() {
-           $(this).remove(); // prevent memory leaks
-           $('body').css('background-image', "url('" + urlstring + ".jpg')");
-           $('.demo-blog').addClass('over');
-        });
-    });
+    docbody[0].style.backgroundImage = "url('" + urlstring + ".jpg')";
 
     (function() {
         'use strict';
