@@ -55,7 +55,7 @@
 </head>
 
 <body>
-    <div class="demo-blog mdl-layout mdl-js-layout is-upgraded over">
+    <div class="demo-blog mdl-layout mdl-js-layout is-upgraded">
         <main itemscope itemtype="http://schema.org/SoftwareApplication" class="mdl-layout__content">
             <img itemprop="image" class="logo" src="images/logo.png">
             <div class="non-footer">
@@ -139,6 +139,9 @@
     var bgnum = Math.ceil(Math.random() * 58);
     var urlstring = "bgs/bg" + bgnum;
     docbody[0].style.backgroundImage = "url('" + urlstring + ".jpg')";
+    $(window).on('load', function(){
+        $('.demo-blog').addClass('over');
+    });
 
     (function() {
         'use strict';
